@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4f1e8">
+  <title>Snake Club — Classic Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Snake Club home">
+        <span class="brand-mark">S</span>
+        <span>snake<span class="brand-light">club</span></span>
+      </a>
+      <span class="top-note"><span class="status-dot"></span> A little game break</span>
+    </header>
+
+    <section class="intro">
+      <div class="intro-copy">
+        <p class="eyebrow">THE CLASSIC ARCADE GAME</p>
+        <h1>Keep moving.<br><span>Don't bite yourself.</span></h1>
+        <p class="intro-text">Collect the apples, grow your snake and see how long you can last.</p>
+      </div>
+    </section>
+
+    <section class="game-layout" aria-label="Snake game">
+      <div class="game-card">
+        <div class="game-heading">
+          <div>
+            <p class="eyebrow">READY WHEN YOU ARE</p>
+            <h2>Play a round</h2>
+          </div>
+          <span class="game-tag">CLASSIC MODE</span>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="600" height="600" aria-label="Snake game board"></canvas>
+          <div class="game-overlay" id="overlay">
+            <div class="overlay-icon" id="overlayIcon">🐍</div>
+            <h3 id="overlayTitle">Ready to play?</h3>
+            <p id="overlayText">Press start and use your arrow keys to move.</p>
+            <button class="primary-btn" id="overlayStart">Start game <span>→</span></button>
+          </div>
+        </div>
+
+        <div class="game-actions">
+          <button class="primary-btn" id="startBtn">Start game <span>→</span></button>
+          <button class="secondary-btn" id="pauseBtn" disabled>Pause</button>
+          <button class="text-btn" id="restartBtn">Restart ↻</button>
+        </div>
+
+        <div class="mobile-controls" aria-label="Touch controls">
+          <button class="direction up" data-dir="up" aria-label="Move up">↑</button>
+          <button class="direction left" data-dir="left" aria-label="Move left">←</button>
+          <button class="direction down" data-dir="down" aria-label="Move down">↓</button>
+          <button class="direction right" data-dir="right" aria-label="Move right">→</button>
+        </div>
+        <p class="keyboard-hint">USE <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> OR <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> TO MOVE</p>
+      </div>
+
+      <aside class="side-column">
+        <div class="score-card">
+          <p class="eyebrow">YOUR SCORE</p>
+          <div class="score-number" id="score">0</div>
+          <div class="score-divider"></div>
+          <div class="best-row"><span>Best score</span><strong id="bestScore">0</strong></div>
+        </div>
+
+        <div class="how-card">
+          <p class="eyebrow">HOW TO PLAY</p>
+          <h3>Simple rules.</h3>
+          <ul>
+            <li><span class="rule-icon apple">●</span><span>Eat the apples to grow.</span></li>
+            <li><span class="rule-icon">↗</span><span>Don't hit the walls.</span></li>
+            <li><span class="rule-icon">↻</span><span>Don't run into yourself.</span></li>
+          </ul>
+        </div>
+
+        <div class="tip-card">
+          <span class="tip-star">✳</span>
+          <div><strong>Little tip</strong><p>Take your time. A big score comes from smart turns, not fast ones.</p></div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <span>Made for a quick break.</span>
+      <span>© 2026 Snake Club</span>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
